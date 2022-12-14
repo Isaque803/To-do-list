@@ -1,0 +1,61 @@
+@import "mixins";
+
+.task{
+    width: 100%;
+    padding: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0rem;
+    gap: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+    @include borderAndBackground(hsl(60, 64%, 98%), hsl(60, 1%, 88%));
+
+    p{
+        word-break: break-word;
+    }
+
+    .buttons-task{
+        display: flex;
+        gap: 5px;
+    }
+}
+
+.task.active{
+    color: white;
+    @include borderAndBackground(hsl(0, 0%, 40%), hsl(0, 0%, 30%));
+
+    p{
+        text-decoration: line-through;
+    }
+}
+
+.btn-task{
+    padding: 0.5rem 0.6rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.checked{
+    @include borderAndBackground(hsl(0, 0%, 40%), hsl(0, 0%, 30%));
+    &:hover{
+        @include borderAndBackground(hsl(0, 0%, 30%), hsl(0, 0%, 20%));
+    }
+}
+
+.task.active .checked{
+    @include borderAndBackground(hsl(115, 70%, 70%), hsl(135, 70%, 55%));
+    &:hover{
+        @include borderAndBackground(hsl(135, 70%, 55%), hsl(155, 70%, 45%));
+    }
+}
+
+.delete{
+    @include borderAndBackground(hsl(0, 70%, 70%), hsl(340, 70%, 55%));
+    &:hover{
+        @include borderAndBackground(hsl(340, 70%,55%), hsl(320, 70%, 45%));
+    }
+}
+

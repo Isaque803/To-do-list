@@ -1,0 +1,90 @@
+@import "mixins";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 1rem;
+    background-color: hsl(220, 10%, 30%);
+    font-family: 'Nunito', sans-serif;
+}
+
+header{
+    max-width:600px;
+    padding: 0.7rem 0rem;
+    text-align: center;
+    margin: auto auto 2rem auto;
+    @include borderAndBackground(hsl(60, 64%, 98%), hsl(60, 1%, 88%));
+}
+
+#container{
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+    @include borderAndBackground(hsl(60, 64%, 98%), hsl(60, 1%, 88%));
+}
+
+.search-tasks{
+    margin-bottom: 1rem;
+
+    input{
+        width: 100%;
+        border: none;
+        padding: 0rem 0.7rem;
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 600;
+        @include borderAndBackground(hsl(200, 69%, 90%), hsl(200, 69%, 80%));
+    }
+
+    div{
+        padding: 1rem 1.1rem;
+        border: none;
+        color: white;
+        @include borderAndBackground(hsl(207, 70%, 70%), hsl(207, 70%, 55%));
+
+        i{
+            font-size: 1.5rem;
+        } 
+    }
+}
+
+.input-text, .search-tasks{
+    display: flex;
+    gap: 10px;
+}
+
+.input-text > input{
+    width: 100%;
+    border: none;
+    padding: 0rem 0.7rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: hsl(45, 69%, 90%);
+    @include borderAndBackground(hsl(45, 69%, 90%), hsl(25, 69%, 80%));
+}
+
+.input-text > input:focus, .search-tasks > input:focus{
+    outline: none;
+}
+
+.btn-create-task{
+    padding: 1rem 1.1rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    @include borderAndBackground(hsl(118, 70%, 70%), hsl(138, 70%, 55%));
+    &:hover{
+        @include borderAndBackground(hsl(135, 70%, 55%), hsl(155, 70%, 45%));
+    }
+}
+
+@media (max-width: 400px){
+    .search-tasks > div, .btn-create-task{
+        padding: 0.7rem 0.8rem;
+    }
+}

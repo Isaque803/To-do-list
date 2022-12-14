@@ -1,0 +1,4 @@
+@mixin borderAndBackground($background, $border){
+    background-color: $background;
+    border-bottom: 4px solid $border;
+}
