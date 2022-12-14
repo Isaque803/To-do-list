@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/78f0a022bd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>To-do List</title>
+</head>
+<body>
+    <header>
+        <h1>To-do List</h1>
+    </header>
+
+    <main id="container">
+        <section class="sec-interactive">
+            <div class="search-tasks">
+                <input type="text" name="search" id="search" placeholder="Pesquisar">
+                <div><i class="fa-solid fa-magnifying-glass"></i></div>
+            </div>
+
+            <div class="input-text">
+                <input type="text" name="text" id="text" placeholder="Digite algo" maxlength="60">
+                <button class="btn-create-task"><i class="fa-sharp fa-solid fa-plus fa-2x"></i></button>
+            </div>
+        </section>
+
+        <section class="repository-tasks"></section>
+    </main>
+
+    <script src="JS/interactive.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 1rem;
+    background-color: hsl(220, 10%, 30%);
+    font-family: 'Nunito', sans-serif;
+}
+
+header{
+    max-width:600px;
+    padding: 0.7rem 0rem;
+    text-align: center;
+    background-color: hsl(60, 64%, 98%);
+    border-bottom: 5px solid hsl(60, 1%, 88%);
+    margin: auto auto 2rem auto;
+}
+
+#container{
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+    background-color: hsl(60, 64%, 98%);
+    border-bottom: 5px solid hsl(60, 1%, 88%);
+}
+
+.search-tasks{
+    margin-bottom: 1rem;
+}
+
+.search-tasks > input{
+    width: 100%;
+    border: none;
+    padding: 0rem 0.7rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: hsl(200, 69%, 90%);
+    border-bottom: 5px solid hsl(200, 69%, 80%);
+}
+
+.search-tasks > div{
+    padding: 1rem 1.1rem;
+    background-color: hsl(207, 70%, 70%);
+    border: none;
+    border-bottom: 5px solid hsl(207, 70%, 55%);
+    color: white;
+}
+
+.search-tasks > div > i{
+    font-size: 1.5rem;
+}
+
+.input-text, .search-tasks{
+    display: flex;
+    gap: 10px;
+}
+
+.input-text > input{
+    width: 100%;
+    border: none;
+    padding: 0rem 0.7rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: hsl(45, 69%, 90%);
+    border-bottom: 5px solid hsl(25, 69%, 80%);
+}
+
+.input-text > input:focus, .search-tasks > input:focus{
+    outline: none;
+}
+
+
+.btn-create-task{
+    padding: 1rem 1.1rem;
+    background-color: hsl(118, 70%, 70%);
+    border: none;
+    border-bottom: 5px solid hsl(138, 70%, 55%);
+    color: white;
+    cursor: pointer;
+}
+
+.btn-create-task:hover{
+    background-color: hsl(135, 70%, 55%);
+    border-bottom: 5px solid hsl(155, 70%, 45%);
+}
+
+
+/*TASK ---------------------------------------------------*/
+
+.task{
+    width: 100%;
+    padding: 0.5rem;
+    background-color: hsl(60, 64%, 98%);
+    border-bottom: 3px solid hsl(60, 1%, 88%);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0rem;
+    gap: 10px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.buttons-task{
+    display: flex;
+    gap: 5px;
+}
+
+.task p{
+    word-break: break-word;
+}
+
+.task.active{
+    background-color: hsl(0, 0%, 40%);
+    border-bottom: 3px solid hsl(0, 0%, 30%);
+    color: white;
+}
+
+.task.active > p{
+    text-decoration: line-through;
+}
+
+.btn-task{
+    padding: 0.5rem 0.6rem;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.checked{
+    background-color: hsl(0, 0%, 40%);
+    border-bottom: 3px solid hsl(0, 0%, 30%);
+}
+
+.checked:hover{
+    background-color: hsl(0, 0%, 30%);
+    border-bottom: 3px solid hsl(0, 0%, 20%);
+}
+
+.task.active .checked{
+    background-color: hsl(115, 70%, 70%);
+    border-bottom: 3px solid hsl(135, 70%, 55%);
+}
+
+.task.active .checked:hover{
+    background-color: hsl(135, 70%, 55%);
+    border-bottom: 3px solid hsl(155, 70%, 45%);
+}
+
+.delete{
+    background-color: hsl(0, 70%, 70%);
+    border-bottom: 3px solid hsl(340, 70%, 55%);
+}
+
+.delete:hover{
+    background-color: hsl(340, 70%,55%);
+    border-bottom: 3px solid hsl(320, 70%, 45%);
+}
+
+@media (max-width: 400px){
+    .search-tasks > div, .btn-create-task{
+        padding: 0.7rem 0.8rem;
+    }
+}
